@@ -5,10 +5,10 @@ import MongoStore from "connect-mongo";
 import passport from "passport";
 import winston from "winston";
 
-import {initDB} from "../startup/db";
-import { initCORS } from "../startup/cors";
-import { initPassportJS } from "../startup/passport";
-import { initLogger } from "../startup/logging";
+import {initDB} from "./startup/db";
+import { initCORS } from "./startup/cors";
+import { initPassportJS } from "./startup/passport";
+import { initLogger } from "./startup/logging";
 
 const PORT = process.env.PORT
 const app = express();
