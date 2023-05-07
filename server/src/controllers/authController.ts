@@ -26,7 +26,7 @@ export const postLogin = (req: Request, res: Response, next: NextFunction) => {
 
   sanitizedInput.username = req.body.username.toLowerCase();
 
-  passport.authenticate("local", (err: Error, user: UserDocument, info) => {
+  passport.authenticate("local", (err: Error, user: UserDocument, info:any) => {
     if (err) {
       return next(err);
     }

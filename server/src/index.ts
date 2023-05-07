@@ -9,6 +9,7 @@ import {initDB} from "./startup/db";
 import { initCORS } from "./startup/cors";
 import { initPassportJS } from "./startup/passport";
 import { initLogger } from "./startup/logging";
+import { initRoutes } from "./routes/index";
 
 const PORT = process.env.PORT
 const app = express();
@@ -34,5 +35,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+initRoutes(app);
+
 
 app.listen(PORT, () => winston.info(`Server started on PORT ${PORT}`));

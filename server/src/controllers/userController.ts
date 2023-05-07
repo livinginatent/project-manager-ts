@@ -15,11 +15,12 @@ import EmailService from "../services/emailService";
 
 export const getUser = (req: Request, res: Response) => {
   const user = req.user;
-
+  
   res.status(200).send({ message: "User info successfully retreived", user });
 };
 
 export const postUser = async (req: Request, res: Response) => {
+  
   // Validate Register input
   const { error } = validateRegisterInput(req.body);
   if (error) return res.status(400).send({ message: error.details[0].message });
