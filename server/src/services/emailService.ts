@@ -45,7 +45,7 @@ export const createVerificationEmail = (
     subject: "Email Verification",
     text: "Some uselss text",
     html: `<p>Please verify your account by clicking the link: 
-  <a href="http://${host}/confirmation/${verificationTokenValue}">http://${host}/confirmation/${verificationTokenValue}</a> </p>`,
+  <a href="http://${host}/account/confirm/${verificationTokenValue}">http://${host}/account/confirm/${verificationTokenValue}</a> </p>`,
   };
 
   return email;
